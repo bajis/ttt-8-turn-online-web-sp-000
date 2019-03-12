@@ -10,7 +10,7 @@ end
 #converts user input to integer
 
 def input_to_index(input)
-  input.to_i -1
+  input.to_i - 1
 end
 
 # check position to see if it is taken
