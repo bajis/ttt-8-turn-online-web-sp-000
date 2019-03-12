@@ -39,3 +39,19 @@ def position_taken?(array, user)
     return true
   end
 end
+
+# user num and place X or O
+def move(board, input, value = "X")
+  board[input] = value
+end
+def turn (board)
+  puts "Please enter 1-9:"
+  num = gets.chomp
+  index = input_to_index(num)
+  if valid_move?(board, index) == true
+    move(board, index)
+    display_board(board)
+  else
+    turn(board)
+  end
+end
